@@ -1,11 +1,41 @@
 const digitBtns = document.querySelectorAll('.digits button');
+const functionBtns = document.querySelectorAll('.functions button');
+
 const display = document.querySelector('.display');
 
+let operation = [];
 let displayValue = [];
 
-digitBtns.forEach(btn => btn.addEventListener('click', () => {
-    displayValue.push(btn.textContent);
+digitBtns.forEach(digitBtn => digitBtn.addEventListener('click', () => {
+    displayValue.push(digitBtn.textContent);
     display.value = displayValue.join('');
+}))
+
+functionBtns.forEach(functionBtn => functionBtn.addEventListener('click', () => {
+    //if no operand in display
+    if(!displayValue.length){
+        display.value = "Error";
+    }
+    else{
+        operation.push(displayValue.join(''));
+        operation.push(functionBtn.textContent);
+        displayValue.splice(0);
+    }
+    //if two operand/operator pairs exist
+    if(operation.length === 4){
+        //evaluate operands and first operator
+        const a = parseInt(operation[0]);
+        const b = parseInt(operation[2]);
+        const operator = operation[1];
+        const result = operate(operator, a, b);
+
+        //update display with result
+        display.value = result;
+
+        //replace operands and first operator with result
+        operation.splice(0, 3);
+        operation.unshift(result);
+    }
 }))
 
 
