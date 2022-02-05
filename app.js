@@ -1,3 +1,15 @@
+const digitBtns = document.querySelectorAll('.digits button');
+const display = document.querySelector('.display');
+
+let displayValue = [];
+
+digitBtns.forEach(btn => btn.addEventListener('click', () => {
+    displayValue.push(btn.textContent);
+    display.value = displayValue.join('');
+}))
+
+
+//operations
 function add(a, b){
     return a + b;
 }
