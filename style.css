@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.calculator {
+    background-color: mistyrose;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    border-radius: 1em;
+}
+
+.digits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+button {
+    border: none;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background-color: pink;
+    cursor: pointer;
+}
+
+.digits button {
+    width: 30%;
+}
+
+.digits button:hover {
+    background-color: hotpink;
+}
+
+.functions button, .equals {
+    background-color: lightgreen;
+    padding-inline: 1em;
+}
+
+.functions button:hover, .equals:hover {
+    background-color: mediumseagreen;
+}
+
+.clear {
+    background-color: white;
+}
+
+.clear:hover {
+    background-color: pink;
+}
+
+.display {
+    border: none;
+    height: 3em;
+    width: 90%;
+    border-radius: 0.5em;
+    padding-inline: 0.8em;
+    font-size: 1em;
+}
