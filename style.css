@@ -1,0 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+#calculator {
+  border: 2px solid black;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+#digits {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#operators {
+  display: flex;
+  flex-direction: column;
+}
+
+.operation-buttons {
+  display: flex;
+}
+
+.digit {
+  width: 30%;
+}
