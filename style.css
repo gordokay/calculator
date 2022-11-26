@@ -1,39 +1,77 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   display: flex;
   justify-content: center;
+  margin-top: 16px;
+  font-family: 'Space Mono', monospace;
+  font-weight: bold;
 }
 
 #calculator {
-  border: 2px solid black;
-  padding: 8px;
+  width: 270px;
+  height: 400px;
+  padding: 16px 16px;
   display: flex;
   flex-direction: column;
+  background: #2E294E;
+  gap: 8px;
+}
+
+#display {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 8px;
+  height: 15%;
+  background: #FFE9F3;
+  color:#2E294E;
+  font-weight: normal;
 }
 
 #buttons {
   display: flex;
-  flex-direction: column;
-}
-
-#digits {
-  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
 }
 
-#operators {
-  display: flex;
-  flex-direction: column;
+button {
+  width: calc(25% - 8px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+  background: #FFE9F3;
+  color: #2E294E;
+  font: inherit;
+  text-align: center;
 }
 
-.operation-buttons {
-  display: flex;
+button:hover {
+  cursor: pointer;
 }
 
-.digit {
-  width: 30%;
+#equals {
+  width: 50%;
+  aspect-ratio: 2;
+  border-radius: 0;
+  background: #87BAAB;
+  margin-left: auto;
 }
+
+#clear {
+  background: #F46036;
+}
+
+.operator {
+  background: #E365C1;
+}
+ 
+
+
