@@ -64,12 +64,19 @@ function makeCalculator() {
   const decimal = document.querySelector('#decimal')
   const equals = document.querySelector('#equals');
   const clear = document.querySelector('#clear');
+  const buttonPress = new Audio('button-press.wav');
 
   const operation = [];
 
   let operatorsEnabled = true;
   //determines if display will clear on next update
   let willClear = false;
+
+  //plays sound when clicked
+  [...digits, ...operators, decimal, equals, clear].forEach(btn => btn.addEventListener('click', () => {
+    buttonPress.currentTime = 0;
+    buttonPress.play();
+  }))
 
   digits.forEach(digit => digit.addEventListener('click', () => {
     updateDisplay(digit.textContent, display, willClear);
