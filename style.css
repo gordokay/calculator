@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+:root {
+  --dark: #120D31;
+  --light: #E4FDE1;
+  --primary: #5A83AF;
+  --secondary: #F45B69;
+  --tertiary: #F0D3F7;
+}
 
 * {
   margin: 0;
@@ -11,7 +18,6 @@ body {
   justify-content: center;
   margin-top: 16px;
   font-family: 'Space Mono', monospace;
-  font-weight: bold;
 }
 
 #calculator {
@@ -20,7 +26,7 @@ body {
   padding: 16px 16px;
   display: flex;
   flex-direction: column;
-  background: #2E294E;
+  background: var(--dark);
   gap: 8px;
 }
 
@@ -30,8 +36,8 @@ body {
   justify-content: flex-end;
   padding: 8px;
   height: 15%;
-  background: #FFE9F3;
-  color:#2E294E;
+  background: var(--light);
+  color: var(--dark);
   font-weight: normal;
 }
 
@@ -47,8 +53,8 @@ button {
   aspect-ratio: 1;
   border-radius: 50%;
   border: none;
-  background: #FFE9F3;
-  color: #2E294E;
+  background: var(--primary);
+  color: var(--dark);
   font: inherit;
   text-align: center;
 }
@@ -61,17 +67,16 @@ button:hover {
   width: 50%;
   aspect-ratio: 2;
   border-radius: 0;
-  background: #87BAAB;
+  background: var(--light);
   margin-left: auto;
 }
 
 #clear {
-  background: #F46036;
+  background: var(--secondary);
 }
 
 .operator {
-  background: #E365C1;
+  background: var(--tertiary);
 }
- 
 
 
