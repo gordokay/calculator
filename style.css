@@ -18,7 +18,8 @@
 
 body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin-top: 16px;
   font-family: 'Space Mono', monospace;
   background: var(--tertiary);
@@ -45,7 +46,7 @@ body {
   background: var(--light);
   color: var(--dark);
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.5em;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
@@ -71,6 +72,11 @@ button {
   font: inherit;
   text-align: center;
   box-shadow: 4px 4px var(--dark)
+}
+
+button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px var(--dark);
 }
 
 #equals {
@@ -101,6 +107,8 @@ button:hover,
 .operator:hover {
   background: var(--tertiary-hover);
 }
+
+
 
 
 

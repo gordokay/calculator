@@ -12,7 +12,7 @@ function multiply(a, b) {
 
 function divide(a, b) {
   if(b === 0) {
-    return 'ERROR: divide by zero';
+    return 'can\'t divide by zero...';
   }
   return Math.round((a / b) * 100) / 100;
 }
