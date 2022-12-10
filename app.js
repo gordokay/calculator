@@ -65,6 +65,42 @@ function makeCalculator() {
   const equals = document.querySelector('#equals');
   const clear = document.querySelector('#clear');
 
+  //sound
+  const soundToggler = document.querySelector('input');
+  const buttonPress = new Audio('button-press.wav');
+  const clearPress = new Audio('clear-press.wav');
+  const equalsPress = new Audio('equals-press.wav');
+  let isSoundOn = true;
+
+  soundToggler.addEventListener('click', () => {
+    isSoundOn = isSoundOn ? false : true;
+    soundToggler.setAttribute('src', isSoundOn ? 'sound-on.svg' : 'sound-off.svg');
+  });
+
+  [...digits, ...operators, decimal].forEach(button => {
+    button.addEventListener('click', () => {
+      if(isSoundOn) {
+        buttonPress.currentTime = 0;
+        buttonPress.play();
+      }
+    })
+  })
+
+  clear.addEventListener('click', () => {
+    if(isSoundOn) {
+      clearPress.currentTime = 0;
+      clearPress.play();
+    }
+  })
+
+  equals.addEventListener('click', () => {
+    if(isSoundOn) {
+      equalsPress.currentTime = 0;
+      equalsPress.play();
+    }
+  })
+
+  //calculator logic
   const operation = [];
 
   let operatorsEnabled = true;

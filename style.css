@@ -108,7 +108,11 @@ button:hover,
   background: var(--tertiary-hover);
 }
 
-
+input {
+  align-self: flex-end;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
 
 
 
