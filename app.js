@@ -74,7 +74,7 @@ function makeCalculator() {
 
   soundToggler.addEventListener('click', () => {
     isSoundOn = isSoundOn ? false : true;
-    soundToggler.setAttribute('src', isSoundOn ? './sound-on.svg' : './sound-off.svg');
+    soundToggler.setAttribute('src', isSoundOn ? 'sound-on.svg' : 'sound-off.svg');
     soundToggler.setAttribute('alt', isSoundOn ? 'Sound on' : 'Sound off');
   });
 
